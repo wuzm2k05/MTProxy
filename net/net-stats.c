@@ -52,15 +52,11 @@
 
 #include "engine/engine.h"
 
-struct process_id PID;
-
 extern int zheap_debug;
 long long queries_allocated;
 long long max_queries_allocated;
 long long max_queries_allocated_sec;
 long long max_queries_allocated_prev_sec;
-
-long long total_vv_tree_nodes;
 
 int tl_rpc_op_stat __attribute__ ((weak));
 int op_stat_write (stats_buffer_t *sb) __attribute__ ((weak));
