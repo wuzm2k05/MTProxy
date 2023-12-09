@@ -20,7 +20,7 @@ CINCLUDE = -iquote common -iquote .
 
 LIBLIST = ${LIB}/libkdb.a
 
-PROJECTS = common jobs mtproto net crypto engine
+PROJECTS = common jobs mtproto net crypto engine vv
 
 OBJDIRS := ${OBJ} $(addprefix ${OBJ}/,${PROJECTS}) ${EXE} ${LIB}
 DEPDIRS := ${DEP} $(addprefix ${DEP}/,${PROJECTS})
@@ -47,6 +47,7 @@ LIB_OBJS_NORMAL := \
 	${OBJ}/common/md5.o \
 	${OBJ}/common/resolver.o \
 	${OBJ}/common/parse-config.o \
+	${OBJ}/vv/vv-tree-var.c \
 	${OBJ}/crypto/aesni256.o \
 	${OBJ}/jobs/jobs.o ${OBJ}/common/mp-queue.o \
 	${OBJ}/net/net-events.o ${OBJ}/net/net-msg.o ${OBJ}/net/net-msg-buffers.o \
